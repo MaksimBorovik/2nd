@@ -466,7 +466,6 @@ template {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   background-size: cover;
-  z-index: -1;
 }
 
 html {
@@ -483,7 +482,6 @@ h1 {
 
 .header {
   max-height: 389px;
-  z-index: 0;
 }
 
 .header__container {
@@ -503,6 +501,7 @@ h1 {
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: -1;
 }
 
 .header-logo {
@@ -567,7 +566,6 @@ h1 {
   text-decoration: none;
   color: #eeeeee;
   font-size: 14px;
-  z-index: 20;
 }
 
 .header-navbar__item:last-of-type {
