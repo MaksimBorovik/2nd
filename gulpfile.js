@@ -34,7 +34,7 @@ const plugins = [
 function scss() {
   return src(path.scssFile).
     pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError)).
-    pipe(postcss(plugins)).
+    // pipe(postcss(plugins)).
     pipe(dest(path.cssFolder)).
     pipe(notify({
       message: 'Compiled!',

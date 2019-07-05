@@ -1,0 +1,25 @@
+.content-leftside__categories {
+  position: relative;
+  height: 345px;
+  padding: 20px 15px;
+
+  &--overlay {
+    @extend %overlay;
+  }
+
+  &-list {
+    padding: 0;
+    list-style: none;
+
+    li {
+      padding: 8px;
+    }
+
+    &--item {
+      text-decoration: none;
+      color: $light-color;
+      font-family: $base-font;
+      font-size: 0.85rem;
+    }
+  }
+}

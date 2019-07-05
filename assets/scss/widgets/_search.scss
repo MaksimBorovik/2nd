@@ -1,0 +1,46 @@
+.content-leftside__search {
+  position: relative;
+  height: 120px;
+  padding: 20px 15px;
+  margin-bottom: $gutter / 2;
+
+  &--overlay {
+    @extend %overlay
+  }
+
+  hr {
+    margin: 10px 0;
+    height: 1px;
+    border: none;
+    background-color: $dark-color;
+  }
+
+  form {
+    margin-top: 15px;
+    background-color: rgba(238, 238, 238, 0.2);
+    border: 1px solid rgba(238, 238, 238, 0.3);
+    border-radius: 5px;
+  }
+
+  &--input {
+    width: 152px;
+    height: 28px;
+    padding-left: 5px;
+    font-size: 0.8rem;
+    font-family: $base-font;
+    color: $light-color;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-left: 1px solid rgba(238, 238, 238, 0.3);
+
+    &::placeholder {
+      color: $light-color;
+    }
+  }
+}
+
+.fas.fa-search::before {
+  height: 10px;
+  padding: 6px 8px;
+  color: $light-color;
+}

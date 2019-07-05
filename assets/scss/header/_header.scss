@@ -1,5 +1,6 @@
 .header {
   max-height: 389px;
+  margin-bottom: $gutter;
 
   &__container {
     @extend %container;
@@ -9,11 +10,7 @@
   }
 
   &-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
+    @extend %overlay;
+    border-radius: 0 0 7px 7px;
   }
 }

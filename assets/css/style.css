@@ -67,8 +67,7 @@ figure {
      * 2. Show the overflow in Edge and IE.
      */
 hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -118,8 +117,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -317,8 +315,7 @@ input {
      */
 [type="checkbox"],
 [type="radio"] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
@@ -375,8 +372,7 @@ fieldset {
      *    `fieldset` elements in all browsers.
      */
 legend {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   display: table;
   /* 1 */
@@ -456,14 +452,27 @@ template {
   display: none;
 }
 
-.header__container {
+.header__container, .content__container {
   max-width: 1320px;
   margin-right: auto;
   margin-left: auto;
 }
 
+.header-overlay, .content-leftside__search--overlay, .content-leftside__categories--overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-color: #000000;
+  opacity: 0.5;
+  border-radius: 7px;
+}
+
 * {
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-size: cover;
 }
@@ -480,40 +489,35 @@ h1 {
   color: #eeeeee;
 }
 
+h3 {
+  margin: 0;
+  font-family: "Lora", serif;
+  font-weight: 100;
+  font-size: 1.125rem;
+  color: #eeeeee;
+  letter-spacing: 0.03rem;
+}
+
 .header {
   max-height: 389px;
+  margin-bottom: 30px;
 }
 
 .header__container {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .header-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
+  border-radius: 0 0 7px 7px;
 }
 
 .header-logo {
   padding: 45px 0;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .header-logo__image {
@@ -539,7 +543,7 @@ h1 {
 
 .header-navbar {
   background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 0 0 5px 5px;
+  border-radius: 0 0 7px 7px;
 }
 
 .header-navbar__hamburger {
@@ -547,13 +551,11 @@ h1 {
 }
 
 .header-navbar__list {
+  height: 20px;
   padding-left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
+  align-content: center;
   list-style-type: none;
 }
 
@@ -562,12 +564,93 @@ h1 {
 }
 
 .header-navbar__item a {
-  padding: 15px;
+  padding: 12px 15px;
   text-decoration: none;
   color: #eeeeee;
   font-size: 14px;
 }
 
+.header-navbar__item a:hover {
+  color: #bb1a1a;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
 .header-navbar__item:last-of-type {
   margin-right: 0;
+}
+
+.content__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-leftside {
+  max-width: 220px;
+  height: 790px;
+}
+
+.content-leftside__search {
+  position: relative;
+  height: 120px;
+  padding: 20px 15px;
+  margin-bottom: 15px;
+}
+
+.content-leftside__search hr {
+  margin: 10px 0;
+  height: 1px;
+  border: none;
+  background-color: #000000;
+}
+
+.content-leftside__search form {
+  margin-top: 15px;
+  background-color: rgba(238, 238, 238, 0.2);
+  border: 1px solid rgba(238, 238, 238, 0.3);
+  border-radius: 5px;
+}
+
+.content-leftside__search--input {
+  width: 152px;
+  height: 28px;
+  padding-left: 5px;
+  font-size: 0.8rem;
+  font-family: "Roboto", sans-serif;
+  color: #eeeeee;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  border-left: 1px solid rgba(238, 238, 238, 0.3);
+}
+
+.content-leftside__search--input::placeholder {
+  color: #eeeeee;
+}
+
+.fas.fa-search::before {
+  height: 10px;
+  padding: 6px 8px;
+  color: #eeeeee;
+}
+
+.content-leftside__categories {
+  position: relative;
+  height: 345px;
+  padding: 20px 15px;
+}
+
+.content-leftside__categories-list {
+  padding: 0;
+  list-style: none;
+}
+
+.content-leftside__categories-list li {
+  padding: 8px;
+}
+
+.content-leftside__categories-list--item {
+  text-decoration: none;
+  color: #eeeeee;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85rem;
 }

@@ -2,7 +2,6 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-
   background-size: cover;
 }
 
@@ -17,4 +16,13 @@ h1 {
   //line-height: 1.2em;
   font-size: 2.5rem;
   color: $light-color;
+}
+
+h3 {
+  margin: 0;
+  font-family: $header-font;
+  font-weight: 100;
+  font-size: 1.125rem;
+  color: $light-color;
+  letter-spacing: 0.03rem;
 }

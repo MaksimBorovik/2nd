@@ -1,15 +1,17 @@
 .header-navbar {
   background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 0 0 5px 5px;
+  border-radius: 0 0 7px 7px;
 
   &__hamburger {
     display: none;
   }
 
   &__list {
+    height: 20px;
     padding-left: 0;
     display: flex;
     justify-content: center;
+    align-content: center;
     list-style-type: none;
   }
 
@@ -17,10 +19,16 @@
     margin-right: 10px;
 
     a {
-      padding: 15px;
+      padding: 12px 15px;
       text-decoration: none;
       color: $light-color;
       font-size: 14px;
+
+      &:hover {
+        color: $main-color-highlighted;
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+      }
     }
 
     &:last-of-type {
