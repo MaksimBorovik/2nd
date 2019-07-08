@@ -7,9 +7,6 @@
     position: relative;
     display: flex;
     flex-direction: column;
-  }
-
-  &-overlay {
     @extend %overlay;
     border-radius: 0 0 7px 7px;
   }

@@ -3,10 +3,7 @@
   height: 345px;
   padding: 20px 15px;
   margin-bottom: $gutter / 2;
-
-  &--overlay {
-    @extend %overlay;
-  }
+  @extend %overlay;
 
   h3 {
     @extend %bottom-line;

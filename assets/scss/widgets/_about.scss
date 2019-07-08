@@ -2,10 +2,7 @@
   position: relative;
   height: 295px;
   padding: 20px 15px;
-
-  &--overlay {
-    @extend %overlay;
-  }
+  @extend %overlay;
 
   h3 {
     @extend %bottom-line;

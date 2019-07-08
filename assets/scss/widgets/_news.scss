@@ -1,10 +1,7 @@
 .content-rightside__news {
   position: relative;
   padding: 20px 15px;
-
-  &--overlay {
-    @extend %overlay;
-  }
+  @extend %overlay;
 
   h3 {
     @extend %bottom-line;
