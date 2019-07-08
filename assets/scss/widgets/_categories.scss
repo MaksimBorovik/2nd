@@ -2,9 +2,14 @@
   position: relative;
   height: 345px;
   padding: 20px 15px;
+  margin-bottom: $gutter / 2;
 
   &--overlay {
     @extend %overlay;
+  }
+
+  h3 {
+    @extend %bottom-line;
   }
 
   &-list {
@@ -12,14 +17,14 @@
     list-style: none;
 
     li {
-      padding: 8px;
+      padding: 7px 0;
     }
 
     &--item {
       text-decoration: none;
       color: $light-color;
-      font-family: $base-font;
-      font-size: 0.85rem;
+      //font-family: $base-font;
+      font-size: 0.875rem;
     }
   }
 }

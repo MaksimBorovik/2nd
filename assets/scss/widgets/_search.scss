@@ -8,11 +8,8 @@
     @extend %overlay
   }
 
-  hr {
-    margin: 10px 0;
-    height: 1px;
-    border: none;
-    background-color: $dark-color;
+  h3 {
+    @extend %bottom-line;
   }
 
   form {

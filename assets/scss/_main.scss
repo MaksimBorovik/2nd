@@ -1,8 +1,5 @@
-.content {
-
-  &__container {
-    @extend %container;
-    display: flex;
-    flex-direction: column;
-  }
+.content-main {
+  margin: $gutter;
+  width: 800px;
+  height: 900px;
 }

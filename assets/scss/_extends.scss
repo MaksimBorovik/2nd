@@ -17,3 +17,8 @@
   opacity: 0.5;
   border-radius: 7px;
 }
+
+%bottom-line {
+  border-bottom: 1px solid $dark-color;
+  padding-bottom: 10px;
+}
