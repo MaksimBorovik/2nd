@@ -30,6 +30,15 @@
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+
+    &:hover {
+      color: $main-color-highlighted;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
   }
 
   img {
