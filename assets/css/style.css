@@ -452,13 +452,12 @@ template {
   display: none;
 }
 
-.header__container, .content__container, .widgets__container {
+.header__container, .content__container, .widgets__container, .footer__container {
   max-width: 1320px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
 }
 
-.header__container, .content-main__breadcrumb, .content-main__title, .content-main__tiles-item, .widgets-first, .widgets-second, .widgets-third, .widgets-fourth, .content-leftside__search, .content-leftside__categories, .content-leftside__about, .content-rightside__news, .news-articles__item h4:hover::after {
+.header__container, .content-main__breadcrumb, .content-main__title, .content-main__tiles-item, .widgets-first, .widgets-second, .widgets-third, .widgets-fourth, .content-leftside__search, .content-leftside__categories, .content-leftside__categories-list li:hover, .content-leftside__about, .content-rightside__news, .news-articles__item h4:hover::after, .footer__container {
   top: 0;
   left: 0;
   right: 0;
@@ -467,7 +466,7 @@ template {
   border-radius: 7px;
 }
 
-.widgets-first h3, .widgets-second h3, .widgets-third h3, .widgets-fourth h3, .content-leftside__search h3, .content-leftside__categories h3, .content-leftside__about h3, .content-rightside__news h3 {
+.widgets-first h3, .widgets-second h3, .widgets-third h3, .widgets-fourth h3, .content-leftside__search h3, .content-leftside__categories h3, .content-leftside__about h3, .content-rightside__news h3, .footer__container h3 {
   border-bottom: 1px solid #000000;
   padding-bottom: 10px;
 }
@@ -513,7 +512,8 @@ h4 {
 }
 
 p {
-  padding: 3px 0;
+  margin: 17px 0;
+  padding: 0;
   color: #eeeeee;
   font-size: 0.875rem;
   line-height: 2em;
@@ -729,6 +729,7 @@ p {
 .widgets__container {
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
 }
 
 .widgets-first {
@@ -804,6 +805,14 @@ p {
   padding: 7px 0;
 }
 
+.content-leftside__categories-list li:hover {
+  padding: 7px 10px;
+}
+
+.content-leftside__categories-list li:hover > a {
+  color: #e12727;
+}
+
 .content-leftside__categories-list--item {
   text-decoration: none;
   color: #eeeeee;
@@ -855,7 +864,7 @@ p {
 }
 
 .news-articles__item h4:hover {
-  color: #bb1a1a;
+  color: #e12727;
 }
 
 .news-articles__item h4 a {
@@ -879,4 +888,21 @@ p {
   font-size: 0.8rem;
   line-height: 1.5em;
   letter-spacing: 0.025em;
+}
+
+.footer {
+  margin-bottom: 30px;
+}
+
+.footer__container {
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__container h3 {
+  width: 300px;
+  text-align: center;
 }

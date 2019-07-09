@@ -14,12 +14,20 @@
 
     li {
       padding: 7px 0;
+
+      &:hover {
+        padding: 7px 10px;
+        @extend %overlay;
+      }
+
+      &:hover > a {
+        color: $main-color;
+      }
     }
 
     &--item {
       text-decoration: none;
       color: $light-color;
-      //font-family: $base-font;
       font-size: 0.875rem;
     }
   }

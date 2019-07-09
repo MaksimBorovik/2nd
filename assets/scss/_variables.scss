@@ -15,22 +15,22 @@ $base-font: "Roboto", sans-serif;
 
 $font-size: 16px;
 
-@media (min-width: $large + 1) {
-    // > 1200
-}
-
-@media (max-width: $large) and (min-width: $middle + 1) {
-    // 992 .. 1200
-}
-
-@media (max-width: $middle) and (min-width: $small + 1) {
-    // 768 .. 992
-}
-
-@media (max-width: $small) and (min-width: $xsmall + 1) {
-    // 576 .. 768
-}
-
-@media (max-width: $xsmall) {
-    // < 576
-}
+//@media (min-width: $large + 1) {
+//    // > 1200
+//}
+//
+//@media (max-width: $large) and (min-width: $middle + 1) {
+//    // 992 .. 1200
+//}
+//
+//@media (max-width: $middle) and (min-width: $small + 1) {
+//    // 768 .. 992
+//}
+//
+//@media (max-width: $small) and (min-width: $xsmall + 1) {
+//    // 576 .. 768
+//}
+//
+//@media (max-width: $xsmall) {
+//    // < 576
+//}

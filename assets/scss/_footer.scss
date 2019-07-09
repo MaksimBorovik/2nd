@@ -1,0 +1,23 @@
+.footer {
+  margin-bottom: $gutter;
+
+  &__container {
+    @extend %container;
+    @extend %overlay;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h3 {
+      width: 300px;
+      text-align: center;
+      @extend %bottom-line;
+    }
+
+    p {
+
+    }
+  }
+}

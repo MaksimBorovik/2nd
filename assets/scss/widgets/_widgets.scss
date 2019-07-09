@@ -5,6 +5,7 @@
     @extend %container;
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
   }
 
   &-first {
