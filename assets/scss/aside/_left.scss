@@ -1,5 +1,14 @@
 .content-leftside {
-  max-width: 220px;
+  width: 220px;
   height: 790px;
   order: -1;
+
+  @include lg-md {
+    order: 0;
+  }
+
+  @include lg-md {
+    width: calc((100% - 15px) / 2);
+    margin-right: $gutter / 2;
+  }
 }

@@ -1,4 +1,14 @@
 .content-rightside {
-  max-width: 240px;
+  width: 240px;
   height: 810px;
+
+  @include xl-lg {
+    width: 100%;
+    margin-bottom: $gutter / 2;
+  }
+
+  @include lg-md {
+    width: calc((100% - 15px) / 2);
+    margin-bottom: $gutter / 2;
+  }
 }

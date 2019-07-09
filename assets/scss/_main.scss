@@ -1,8 +1,18 @@
 .content-main {
   margin: 0 $gutter $gutter;
-  width: 800px;
+  max-width: 800px;
   height: 900px;
 
+  @include xl-lg {
+    max-width: calc(100% - 250px);
+    margin: 0 0 $gutter $gutter;
+  }
+
+  @include lg-md {
+    max-width: 100%;
+    margin: 0 0 $gutter;
+  }
+  
   &__breadcrumb {
     display: flex;
     justify-content: flex-end;
@@ -61,7 +71,7 @@
       &--content {
         position: relative;
         margin: 5px;
-        width: calc(100% - 10px);
+        max-width: calc(100% - 10px);
         height: calc(100% - 10px);
         overflow: hidden;
 

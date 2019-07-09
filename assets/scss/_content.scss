@@ -4,5 +4,14 @@
     @extend %container;
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
+    
+    @include xl-lg {
+      flex-wrap: wrap;
+    }
+
+    @include lg-md {
+      flex-wrap: wrap;
+    }
   }
 }

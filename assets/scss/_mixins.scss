@@ -5,6 +5,12 @@
   }
 }
 
+@mixin lg {
+  @media (max-width: $large) {
+    @content;
+  }
+}
+
 @mixin xl-lg {
   @media (max-width: $large) and (min-width: $middle + 1) {
     @content;

@@ -457,7 +457,14 @@ template {
   margin: 0 auto;
 }
 
-.header__container, .content-main__breadcrumb, .content-main__title, .content-main__tiles-item, .widgets-first, .widgets-second, .widgets-third, .widgets-fourth, .content-leftside__search, .content-leftside__categories, .content-leftside__categories-list li:hover, .content-leftside__about, .content-rightside__news, .news-articles__item h4:hover::after, .footer__container {
+@media (max-width: 1200px) {
+  .header__container, .content__container, .widgets__container, .footer__container {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+}
+
+.header__container, .content-main__breadcrumb, .content-main__title, .content-main__tiles-item, .widgets-item, .content-leftside__search, .content-leftside__categories, .content-leftside__categories-list li:hover, .content-leftside__about, .content-rightside__news, .news-articles__item h4:hover::after, .footer__container {
   top: 0;
   left: 0;
   right: 0;
@@ -466,7 +473,7 @@ template {
   border-radius: 7px;
 }
 
-.widgets-first h3, .widgets-second h3, .widgets-third h3, .widgets-fourth h3, .content-leftside__search h3, .content-leftside__categories h3, .content-leftside__about h3, .content-rightside__news h3, .footer__container h3 {
+.widgets-item h3, .content-leftside__search h3, .content-leftside__categories h3, .content-leftside__about h3, .content-rightside__news h3, .footer__container h3 {
   border-bottom: 1px solid #000000;
   padding-bottom: 10px;
 }
@@ -600,12 +607,39 @@ p {
 .content__container {
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+@media (max-width: 1200px) and (min-width: 993px) {
+  .content__container {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 992px) and (min-width: 769px) {
+  .content__container {
+    flex-wrap: wrap;
+  }
 }
 
 .content-main {
   margin: 0 30px 30px;
-  width: 800px;
+  max-width: 800px;
   height: 900px;
+}
+
+@media (max-width: 1200px) and (min-width: 993px) {
+  .content-main {
+    max-width: calc(100% - 250px);
+    margin: 0 0 30px 30px;
+  }
+}
+
+@media (max-width: 992px) and (min-width: 769px) {
+  .content-main {
+    max-width: 100%;
+    margin: 0 0 30px;
+  }
 }
 
 .content-main__breadcrumb {
@@ -665,7 +699,7 @@ p {
 .content-main__tiles-item--content {
   position: relative;
   margin: 5px;
-  width: calc(100% - 10px);
+  max-width: calc(100% - 10px);
   height: calc(100% - 10px);
   overflow: hidden;
 }
@@ -712,14 +746,41 @@ p {
 }
 
 .content-leftside {
-  max-width: 220px;
+  width: 220px;
   height: 790px;
   order: -1;
 }
 
+@media (max-width: 992px) and (min-width: 769px) {
+  .content-leftside {
+    order: 0;
+  }
+}
+
+@media (max-width: 992px) and (min-width: 769px) {
+  .content-leftside {
+    width: calc((100% - 15px) / 2);
+    margin-right: 15px;
+  }
+}
+
 .content-rightside {
-  max-width: 240px;
+  width: 240px;
   height: 810px;
+}
+
+@media (max-width: 1200px) and (min-width: 993px) {
+  .content-rightside {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 992px) and (min-width: 769px) {
+  .content-rightside {
+    width: calc((100% - 15px) / 2);
+    margin-bottom: 15px;
+  }
 }
 
 .widgets {
@@ -732,27 +793,32 @@ p {
   align-items: flex-start;
 }
 
-.widgets-first {
+@media (max-width: 992px) and (min-width: 769px) {
+  .widgets__container {
+    flex-wrap: wrap;
+  }
+}
+
+.widgets-item {
   margin-right: 15px;
   padding: 20px 15px;
   flex-basis: calc((100% - 45px) / 4);
 }
 
-.widgets-second {
-  margin-right: 15px;
-  padding: 20px 15px;
-  flex-basis: calc((100% - 45px) / 4);
+@media (max-width: 992px) and (min-width: 769px) {
+  .widgets-item {
+    flex-basis: calc((100% - 15px) / 2);
+  }
+  .widgets-item:first-of-type {
+    margin-bottom: 15px;
+  }
+  .widgets-item:nth-of-type(2) {
+    margin-right: 0;
+  }
 }
 
-.widgets-third {
-  margin-right: 15px;
-  padding: 20px 15px;
-  flex-basis: calc((100% - 45px) / 4);
-}
-
-.widgets-fourth {
-  padding: 20px 15px;
-  flex-basis: calc((100% - 45px) / 4);
+.widgets-item:last-of-type {
+  margin-right: 0;
 }
 
 .content-leftside__search {
