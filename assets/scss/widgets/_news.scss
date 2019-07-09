@@ -30,20 +30,14 @@
 
     &:hover::after {
       @extend %overlay;
-      background-color: unset;
       background: linear-gradient(to left, rgba($dark-color, 0), rgba($dark-color, 0.5), rgba($dark-color, 0));
-      transition: background .5s ease; // doesn't work! Why???
     }
 
     &::after {
       content: " ";
       position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
       z-index: -1;
-      transition: background 0.5s ease;
+      transition: background 0.5s ease; // doesn't work! Why???
     }
 
     &:hover {
