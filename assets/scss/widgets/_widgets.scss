@@ -1,0 +1,52 @@
+.widgets {
+  margin-bottom: $gutter / 2;
+
+  &__container {
+    @extend %container;
+    display: flex;
+    flex-direction: row;
+  }
+
+  &-first {
+    margin-right: $gutter / 2;
+    padding: 20px 15px;
+    flex-basis: calc((100% - 45px) / 4);
+    @extend %overlay;
+
+    h3 {
+      @extend %bottom-line;
+    }
+  }
+
+  &-second {
+    margin-right: $gutter / 2;
+    padding: 20px 15px;
+    flex-basis: calc((100% - 45px) / 4);
+    @extend %overlay;
+
+    h3 {
+      @extend %bottom-line;
+    }
+  }
+
+  &-third {
+    margin-right: $gutter / 2;
+    padding: 20px 15px;
+    flex-basis: calc((100% - 45px) / 4);
+    @extend %overlay;
+
+    h3 {
+      @extend %bottom-line;
+    }
+  }
+
+  &-fourth {
+    padding: 20px 15px;
+    flex-basis: calc((100% - 45px) / 4);
+    @extend %overlay;
+
+    h3 {
+      @extend %bottom-line;
+    }
+  }
+}
