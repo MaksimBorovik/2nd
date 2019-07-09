@@ -1,25 +1,48 @@
 .content-main {
-  margin: 0 $gutter;
+  margin: 0 $gutter $gutter;
   width: 800px;
   height: 900px;
 
   &__breadcrumb {
-    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     height: 38px;
+    padding: 0 20px;
     margin-bottom: $gutter;
+    @extend %overlay;
+    background-color: unset;
+    background-image: linear-gradient(to left, rgba($dark-color, 0.8), rgba($dark-color, 0));
 
-    &--overlay {
-      @extend %overlay;
+    span {
+      padding-right: 8px;
+      color: $light-color;
+      font-size: 0.875rem;
+      line-height: 2em;
+      letter-spacing: 0.1em;
+      font-weight: bold;
+
+      &:last-of-type {
+        padding-right: 0px;
+        font-weight: lighter;
+        letter-spacing: 0.15em;
+      }
+    }
+
+    &:last-of-type {
+      font-weight: lighter;
     }
   }
 
   &__title {
-    position: relative;
     height: 58px;
     margin-bottom: $gutter;
+    @extend %overlay;
+    background-color: unset;
+    background-image: linear-gradient(to right, rgba($dark-color, 0.8), rgba($dark-color, 0.7), rgba($dark-color, 0.65), rgba($dark-color, 0.6), rgba($dark-color, 0.55), rgba($dark-color, 0.55), rgba($dark-color, 0.55), rgba($dark-color, 0.55), rgba($dark-color, 0));
 
-    &--overlay {
-      @extend %overlay;
+    h2 {
+      padding: 12px 10px;
     }
   }
 
@@ -27,7 +50,6 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-
 
     &-item {
       position: relative;
