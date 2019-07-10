@@ -68,8 +68,14 @@
       width: calc((100% - 30px) / 3 );
       @extend %overlay;
 
-      @include md {
-        width: calc((100% - 15px) / 3 );
+      &:nth-of-type(10),
+      &:nth-of-type(11),
+      &:nth-of-type(12) {
+        margin-bottom: 0;
+      }
+
+      @include lg-md {
+        width: calc((100% - 30px) / 3 );
       }
 
       @include sm {
@@ -77,6 +83,14 @@
       }
 
       @include xs {
+        width: calc((100% - 15px) / 2 );
+        
+        &:nth-of-type(10) {
+          margin-bottom: $gutter / 2;
+        }
+      }
+
+      @include xxs {
         width: 100%;
       }
 

@@ -11,7 +11,15 @@
   &__image {
     margin: 0 auto;
     display: block;
-    width: 400px;
+    max-width: 400px;
+
+    @include md {
+      max-width: 250px;
+    }
+
+    // @include xs {
+    //   max-width: 250px;
+    // }
   }
 
   h1 {
@@ -19,6 +27,14 @@
     margin-bottom: 0;
     letter-spacing: 0.4rem;
     text-align: center;
+
+    @include md-sm {
+      margin-top: 18px;
+    }
+
+    @include xs {
+      margin-top: 16px;
+    }
   }
 
   &__sign {

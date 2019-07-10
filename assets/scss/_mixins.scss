@@ -46,3 +46,9 @@
     @content;
   }
 }
+
+@mixin xxs {
+  @media (max-width: $xxsmall) {
+    @content;
+  }
+}
