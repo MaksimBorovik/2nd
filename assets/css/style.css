@@ -946,7 +946,7 @@ p {
 }
 
 .content-leftside__search--input {
-  width: 152px;
+  width: calc(100% - 36px);
   height: 28px;
   padding-left: 5px;
   font-size: 0.8rem;
