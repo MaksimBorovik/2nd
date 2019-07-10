@@ -875,7 +875,7 @@ p {
 
 .content-main__tiles-item--content-link:hover ~ .content-main__tiles-item--content-caption {
   display: block;
-  transform: translateY(-137px);
+  transform: translateY(-100%);
 }
 
 .content-main__tiles-item--content-link:hover > a > p {
@@ -896,7 +896,7 @@ p {
 
 .content-main__tiles-item--content-caption {
   position: absolute;
-  bottom: -137px;
+  bottom: -calc(100% -28px);
   margin: 0;
   padding: 17px 0;
   height: calc(100% - 28px);
