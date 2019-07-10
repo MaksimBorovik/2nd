@@ -3,12 +3,17 @@
   height: 810px;
 
   @include xl-lg {
-    width: 100%;
+    flex: 0 0 100%;
     margin-bottom: $gutter / 2;
   }
 
-  @include lg-md {
-    width: calc((100% - 15px) / 2);
+  @include md {
+    flex: 0 0 calc((100% - 15px) / 2);
+    margin-bottom: $gutter / 2;
+  }
+
+  @include xs {
+    flex: 0 0 100%;
     margin-bottom: $gutter / 2;
   }
 }

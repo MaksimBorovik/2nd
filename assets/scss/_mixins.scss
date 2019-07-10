@@ -17,6 +17,12 @@
   }
 }
 
+@mixin md {
+  @media (max-width: $middle) {
+    @content;
+  }
+}
+
 @mixin lg-md {
   @media (max-width: $middle) and (min-width: $small + 1) {
     @content;
@@ -29,7 +35,7 @@
   }
 }
 
-@mixin sm-xs {
+@mixin xs {
   @media (max-width: $xsmall) {
     @content;
   }

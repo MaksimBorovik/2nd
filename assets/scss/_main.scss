@@ -1,15 +1,21 @@
 .content-main {
   margin: 0 $gutter $gutter;
-  max-width: 800px;
+  flex: 0 0 calc(100% - 220px -240px - 60px);
   height: 900px;
 
   @include xl-lg {
-    max-width: calc(100% - 250px);
+    flex: 0 0 calc(100% - 250px);
     margin: 0 0 $gutter $gutter;
   }
 
   @include lg-md {
-    max-width: 100%;
+    flex: 0 0 100%;
+    margin: 0 0 $gutter;
+  }
+
+  @include md {
+    height: auto;
+    flex: 0 0 100%;
     margin: 0 0 $gutter;
   }
   
@@ -68,6 +74,10 @@
       height: 175px;
       @extend %overlay;
 
+      @include md {
+        width: calc((100% - 15px) / 2 );
+      }
+
       &--content {
         position: relative;
         margin: 5px;
@@ -118,5 +128,4 @@
       }
     }
   }
-
 }

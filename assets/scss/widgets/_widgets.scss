@@ -7,7 +7,7 @@
     flex-direction: row;
     align-items: flex-start;
 
-    @include lg-md {
+    @include lg {
       flex-wrap: wrap;
     }
   }
@@ -18,7 +18,7 @@
     flex-basis: calc((100% - 45px) / 4);
     @extend %overlay;
 
-    @include lg-md {
+    @include md {
       flex-basis: calc((100% - 15px) / 2);
       
       &:first-of-type {
@@ -28,6 +28,12 @@
       &:nth-of-type(2) {
         margin-right: 0;
       }
+    }
+
+    @include xs {
+      flex-basis: 100%;
+      margin-right: 0;
+      margin-bottom: $gutter / 2;
     }
 
     &:last-of-type {
