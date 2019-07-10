@@ -10,6 +10,14 @@ html {
   font-size: $font-size;
 }
 
+body {
+  padding: 0 $gutter;
+
+  @include lg {
+    padding: 0 $gutter / 2;
+  }
+}
+
 h1 {
   font-family: $header-font;
   font-weight: 300;

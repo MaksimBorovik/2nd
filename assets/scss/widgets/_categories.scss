@@ -14,9 +14,11 @@
 
     li {
       padding: 7px 0;
+      transition: padding 0.5s;
 
       &:hover {
         padding: 7px 10px;
+        transform: translateX(0);
         @extend %overlay;
       }
 

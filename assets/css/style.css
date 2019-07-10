@@ -457,13 +457,6 @@ template {
   margin: 0 auto;
 }
 
-@media (max-width: 1200px) {
-  .header__container, .content__container, .widgets__container, .footer__container {
-    margin-right: 15px;
-    margin-left: 15px;
-  }
-}
-
 .header__container, .content-main__breadcrumb, .content-main__title, .content-main__tiles-item, .widgets-item, .content-leftside__search, .content-leftside__categories, .content-leftside__categories-list li:hover, .content-leftside__about, .content-rightside__news, .news-articles__item h4:hover::after, .footer__container {
   top: 0;
   left: 0;
@@ -488,6 +481,16 @@ template {
 html {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
+}
+
+body {
+  padding: 0 30px;
+}
+
+@media (max-width: 1200px) {
+  body {
+    padding: 0 15px;
+  }
 }
 
 h1 {
@@ -869,10 +872,12 @@ p {
 
 .content-leftside__categories-list li {
   padding: 7px 0;
+  transition: padding 0.5s;
 }
 
 .content-leftside__categories-list li:hover {
   padding: 7px 10px;
+  transform: translateX(0);
 }
 
 .content-leftside__categories-list li:hover > a {

@@ -1,13 +1,6 @@
 %container {
   max-width: 1320px;
   margin: 0 auto;
-
-  @include lg {
-    margin-right: $gutter / 2 ;
-    margin-left: $gutter / 2 ;
-  }
-
-
 }
 
 %overlay {
