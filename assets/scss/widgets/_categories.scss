@@ -20,6 +20,7 @@
         padding: 7px 10px;
         transform: translateX(0);
         @extend %overlay;
+        background-color: rgba(0, 0, 0, 0.5)
       }
 
       &:hover > a {

@@ -16,6 +16,7 @@
   height: 105px;
   padding: 0;
   clear: both;
+  
 
   &:last-of-type {
     margin-bottom: 0;
@@ -27,17 +28,26 @@
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    transition: color 0.5s ease;
 
     &:hover::after {
       @extend %overlay;
+      top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba($dark-color, 0.5);
+  border-radius: 7px;
       background: linear-gradient(to left, rgba($dark-color, 0), rgba($dark-color, 0.5), rgba($dark-color, 0));
+      opacity: 1;
     }
 
     &::after {
       content: " ";
       position: absolute;
       z-index: -1;
-      transition: background 0.5s ease; // doesn't work! Why???
+      transition: opacity 0.5s ease;
+      opacity: 0;
     }
 
     &:hover {

@@ -4,9 +4,9 @@
       $('body').niceScroll();
   });
 
-  $('.header-menu__btn').click(function() {
+  $('.header-navbar__hamburger').click(function() {
     $(this).toggleClass('active');
-    $('.header-menu__list').toggleClass('active');
+    $('.header-navbar__list').toggleClass('active');
   });
 
 })(jQuery);

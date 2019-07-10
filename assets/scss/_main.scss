@@ -1,22 +1,23 @@
 .content-main {
-  margin: 0 $gutter $gutter;
-  flex: 0 0 calc(100% - 220px -240px - 60px);
+  margin-bottom: $gutter;
+  padding: 0 $gutter;
+  flex: 0 0 calc(100% - 220px -240px);
   height: 900px;
 
   @include xl-lg {
-    flex: 0 0 calc(100% - 250px);
-    margin: 0 0 $gutter $gutter;
+    flex: 0 0 calc(100% - 220px);
+    padding: 0 0 0 $gutter;
   }
 
   @include lg-md {
     flex: 0 0 100%;
-    margin: 0 0 $gutter;
+    padding: 0;
   }
 
   @include md {
     height: auto;
     flex: 0 0 100%;
-    margin: 0 0 $gutter;
+    padding: 0;
   }
   
   &__breadcrumb {
@@ -27,8 +28,6 @@
     padding: 0 20px;
     margin-bottom: $gutter;
     @extend %overlay;
-    background-color: unset;
-    background-image: linear-gradient(to left, rgba($dark-color, 0.8), rgba($dark-color, 0));
 
     span {
       padding-right: 8px;
@@ -51,11 +50,8 @@
   }
 
   &__title {
-    height: 58px;
     margin-bottom: $gutter;
     @extend %overlay;
-    background-color: unset;
-    background-image: linear-gradient(to right, rgba($dark-color, 0.8), rgba($dark-color, 0.7), rgba($dark-color, 0.65), rgba($dark-color, 0.6), rgba($dark-color, 0.55), rgba($dark-color, 0.55), rgba($dark-color, 0.55), rgba($dark-color, 0.55), rgba($dark-color, 0));
 
     h2 {
       padding: 12px 10px;
@@ -71,7 +67,6 @@
       position: relative;
       margin-bottom: $gutter / 2;
       width: calc((100% - 30px) / 3 );
-      height: 175px;
       @extend %overlay;
 
       @include md {
@@ -85,7 +80,17 @@
         height: calc(100% - 10px);
         overflow: hidden;
 
+        img {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+
         &-link {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
           background-color: rgba($dark-color, 0.5);
 
           &:hover ~ .content-main__tiles-item--content-caption {

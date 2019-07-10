@@ -1,5 +1,4 @@
 .header {
-  max-height: 389px;
   margin-bottom: $gutter;
 
   &__container {
@@ -8,5 +7,6 @@
     flex-direction: column;
     @extend %overlay;
     border-radius: 0 0 7px 7px;
+    overflow: hidden;
   }
 }

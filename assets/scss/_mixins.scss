@@ -29,6 +29,12 @@
   }
 }
 
+@mixin sm {
+  @media (max-width: $small) {
+    @content;
+  }
+}
+
 @mixin md-sm {
   @media (max-width: $small) and (min-width: $xsmall + 1) {
     @content;
