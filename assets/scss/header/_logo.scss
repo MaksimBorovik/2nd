@@ -4,6 +4,10 @@
   display: flex;
   flex-direction: column;
 
+  @include sm {
+    padding: $gutter / 2;
+  }
+
   &__image {
     margin: 0 auto;
     display: block;

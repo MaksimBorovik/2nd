@@ -2,7 +2,7 @@
   margin-bottom: $gutter;
   padding: 0 $gutter;
   flex: 0 0 calc(100% - 220px -240px);
-  height: 900px;
+  height: auto;
 
   @include xl-lg {
     flex: 0 0 calc(100% - 220px);
@@ -15,7 +15,6 @@
   }
 
   @include md {
-    height: auto;
     flex: 0 0 100%;
     padding: 0;
   }
@@ -70,7 +69,15 @@
       @extend %overlay;
 
       @include md {
+        width: calc((100% - 15px) / 3 );
+      }
+
+      @include sm {
         width: calc((100% - 15px) / 2 );
+      }
+
+      @include xs {
+        width: 100%;
       }
 
       &--content {
