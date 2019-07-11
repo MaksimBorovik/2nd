@@ -29,6 +29,10 @@
     &::placeholder {
       color: $light-color;
     }
+
+    &:focus {
+      outline: none;
+    }
   }
 }
 
