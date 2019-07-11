@@ -101,56 +101,103 @@
         height: calc(100% - 10px);
         overflow: hidden;
 
+        &:hover .content-main__tiles-item--content-caption {
+          top: 18%;
+        }
+
+        &:hover .content-main__tiles-item--content-title p {
+          color: $main-color-highlighted;
+        }
+
         img {
           display: block;
           width: 100%;
-          height: auto;
         }
 
-        &-link {
+        &-title {
+          height: 18%;
           position: absolute;
           top: 0;
           left: 0;
           right: 0;
           background-color: rgba($dark-color, 0.5);
 
-          &:hover ~ .content-main__tiles-item--content-caption {
-            display: block;
-            transform: translateY(-100%);
-          }
-
-          &:hover > a > p {
-            color: $main-color-highlighted;
-          }
-
-          a {
-            text-decoration: none;
-
-            p {
-              margin: 0;
-              padding: 0 12px;
-              text-overflow: ellipsis;
-              overflow: hidden;
-              white-space: nowrap;
-            }
+          p {
+            position: relative;
+            margin: 0;
+            padding: 0 12px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
           }
         }
 
         &-caption {
-          position: absolute;
-          bottom: -calc(100% -28px);
-          margin: 0;
-          padding: 17px 0;
-          height: calc(100% - 28px);
-          text-align: center;
-          background-color: rgba($dark-color, 0.5);
-          transition: 0.6s;
-
-          p {
+            position: absolute;
+            top: 100%;
             margin: 0;
-            line-height: 1.5em;
+            padding: 17px 0;
+            height: calc(100% - 18%);
+            text-align: center;
+            background-color: rgba($dark-color, 0.5);
+            transition: 0.6s;
+  
+            p {
+              margin: 0;
+              line-height: 1.5em;
+            }
           }
-        }
+
+        // img {
+        //   display: block;
+        //   width: 100%;
+        //   height: auto;
+        // }
+
+        // &-link {
+        //   position: absolute;
+        //   top: 0;
+        //   left: 0;
+        //   right: 0;
+        //   background-color: rgba($dark-color, 0.5);
+
+        //   &:hover ~ .content-main__tiles-item--content-caption {
+        //     display: block;
+        //     top: 28px;
+        //   }
+
+        //   &:hover > a > p {
+        //     color: $main-color-highlighted;
+        //   }
+
+        //   a {
+        //     text-decoration: none;
+
+        //     p {
+        //       margin: 0;
+        //       padding: 0 12px;
+        //       text-overflow: ellipsis;
+        //       overflow: hidden;
+        //       white-space: nowrap;
+        //     }
+        //   }
+        // }
+
+        // &-caption {
+        //   position: absolute;
+        //   bottom: -100%;
+        //   margin: 0;
+        //   padding: 17px 0;
+        //   height: calc(100% - 28px);
+        //   text-align: center;
+        //   background-color: rgba($dark-color, 0.5);
+        //   transition: top 0.6s;
+
+        //   p {
+        //     margin: 0;
+        //     line-height: 1.5em;
+        //   }
+        // }
       }
     }
   }
