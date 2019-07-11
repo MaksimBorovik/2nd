@@ -34,6 +34,10 @@
       flex-basis: 100%;
       margin-right: 0;
       margin-bottom: $gutter / 2;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
     }
 
     &:last-of-type {

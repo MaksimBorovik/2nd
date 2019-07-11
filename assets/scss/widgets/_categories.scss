@@ -16,14 +16,16 @@
       padding: 7px 0;
       transition: padding 0.5s;
 
-      &:hover {
+      &:hover,
+      &:focus {
         padding: 7px 10px;
         transform: translateX(0);
         @extend %overlay;
         background-color: rgba(0, 0, 0, 0.5)
       }
 
-      &:hover > a {
+      &:hover > a,
+      &:focus > a {
         color: $main-color;
       }
     }

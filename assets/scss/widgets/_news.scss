@@ -12,47 +12,34 @@
 }
 
 .news-articles__item {
-  position: relative;
   margin: 0 0 16px;
   height: 105px;
   padding: 0;
   clear: both;
   
-  a {
-    text-decoration: none;
+  &:hover,
+  &:focus {
+    @extend %overlay;
+    background-color: rgba($dark-color, 0.5);
+    background: linear-gradient(to left, rgba($dark-color, 0), rgba($dark-color, 0.5), rgba($dark-color, 0));
+  }
 
-    &:hover::after {
-      @extend %overlay;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba($dark-color, 0.5);
-      border-radius: 7px;
-      background: linear-gradient(to left, rgba($dark-color, 0), rgba($dark-color, 0.5), rgba($dark-color, 0));
-      opacity: 1;
-    }
-
-    &::after {
-      content: " ";
-      position: absolute;
-      z-index: -1;
-      transition: opacity 0.5s ease;
-      opacity: 0;
-    }
-
-    &:hover h4 {
-      color: $main-color;
-    }
+  &:hover h4,
+  &:focus h4 {
+    color: $main-color;
   }
 
   &:last-of-type {
     margin-bottom: 0;
   }
 
+  a {
+    text-decoration: none;
+  }
+
   h4 {
-    margin: 0 0 10px;
-    padding: 0;
+    margin: 0;
+    padding-bottom: 10px;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
