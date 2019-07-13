@@ -845,6 +845,9 @@ p {
   .content-main__tiles-item {
     width: 100%;
   }
+  .content-main__tiles-item:nth-of-type(11) {
+    margin-bottom: 15px;
+  }
 }
 
 .content-main__tiles-item--content {

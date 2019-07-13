@@ -92,6 +92,10 @@
 
       @include xxs {
         width: 100%;
+
+        &:nth-of-type(11) {
+          margin-bottom: $gutter / 2;
+        }
       }
 
       &--content {
