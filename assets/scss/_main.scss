@@ -1,7 +1,7 @@
 .content-main {
   margin-bottom: $gutter;
   padding: 0 $gutter;
-  flex: 0 0 calc(100% - 220px -240px);
+  flex: 0 0 calc(100% - 220px - 240px);
   height: auto;
 
   @include xl-lg {
