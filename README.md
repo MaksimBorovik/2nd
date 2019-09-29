@@ -1,2 +1,2 @@
 **Check out the result on page:**
-https://maksimborovik.github.io/flexbox-template-project/
+https://mirrorimage7.github.io/flexbox-template-project/
